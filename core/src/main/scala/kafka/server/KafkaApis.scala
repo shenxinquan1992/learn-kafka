@@ -595,6 +595,7 @@ class KafkaApis(val requestChannel: RequestChannel,
         }
     })
 
+    // 响应发送消息的回调方法
     // the callback for sending a produce response
     // The construction of ProduceResponse is able to accept auto-generated protocol data so
     // KafkaApis#handleProduceRequest should apply auto-generated protocol to avoid extra conversion.

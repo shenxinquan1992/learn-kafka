@@ -134,7 +134,7 @@ public class OffsetIndex extends AbstractIndex {
         });
     }
 
-    /**
+    /** 持久化索引
      * Append an entry for the given offset/location pair to the index. This entry must have a larger offset than all subsequent entries.
      * @throws IndexOffsetOverflowException if the offset causes index offset to overflow
      * @throws InvalidOffsetException if provided offset is not larger than the last offset

@@ -174,6 +174,7 @@ public class FileRecords extends AbstractRecords implements Closeable {
     }
 
     /**
+     * 消息持久化
      * Append a set of records to the file. This method is not thread-safe and must be
      * protected with a lock.
      *

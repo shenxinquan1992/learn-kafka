@@ -576,13 +576,21 @@ public class NetworkClient implements KafkaClient {
         // process completed actions
         long updatedNow = this.time.milliseconds();
         List<ClientResponse> responses = new ArrayList<>();
+
         handleCompletedSends(responses, updatedNow);
+
         handleCompletedReceives(responses, updatedNow);
+
         handleDisconnections(responses, updatedNow);
+
         handleConnections();
+
         handleInitiateApiVersionRequests(updatedNow);
+
         handleTimedOutConnections(responses, updatedNow);
+
         handleTimedOutRequests(responses, updatedNow);
+
         completeResponses(responses);
 
         return responses;
